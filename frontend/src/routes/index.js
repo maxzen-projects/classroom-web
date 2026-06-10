@@ -1,0 +1,78 @@
+// Route constants for the application
+export const ROUTES = {
+  // Public routes
+  HOME: '/',
+  LOGIN: '/login',
+  SPLASH: '/splash',
+  REGISTER: '/register',
+  FORGOT_PASSWORD: '/forgot-password',
+  RESET_PASSWORD: '/reset-password/:token',
+
+  // Student routes
+  STUDENT_DASHBOARD: '/student/dashboard',
+  STUDENT_SUBJECTS: '/student/subjects',
+  STUDENT_SUBJECT: '/student/subject/:subjectId',
+  STUDENT_CHAPTER: '/student/chapter/:chapterId',
+  STUDENT_LESSON: '/student/lesson/:lessonId',
+  STUDENT_RECORDED_VIDEOS: '/student/recorded-videos',
+  STUDENT_LIVE_CLASSES: '/student/live-classes',
+  STUDENT_ANALYTICS: '/student/analytics',
+  STUDENT_SCHEDULE: '/student/schedule',
+  STUDENT_ATTENDANCE: '/student/attendance',
+  STUDENT_TIMETABLE: '/student/timetable',
+  STUDENT_ASSIGNMENTS: '/student/assignments',
+  STUDENT_FEES: '/student/fees',
+  STUDENT_PROFILE: '/student/profile',
+  STUDENT_ACADEMICS: '/student/academics',
+  TEACHER_EDIT_STUDENT_PROFILE: '/teacher/student/:studentId/profile',
+
+  // Teacher routes
+  TEACHER_DASHBOARD: '/teacher/dashboard',
+  TEACHER_ANALYTICS: '/teacher/analytics',
+  TEACHER_SUBJECT_MANAGE: '/teacher/subject/:subjectId/manage',
+  TEACHER_CREATE_SUBJECT: '/teacher/create-subject',
+  TEACHER_CREATE_CHAPTER: '/teacher/create-chapter',
+  TEACHER_UPLOAD_LESSON: '/teacher/upload-lesson',
+  TEACHER_UPLOAD_NOTES: '/teacher/upload-notes',
+  TEACHER_SCHEDULE_LIVE_CLASS: '/teacher/schedule-live-class',
+  TEACHER_SUBJECTS: '/teacher/subjects',
+  TEACHER_SUBJECT_DETAIL: '/teacher/subject/:subjectId',
+  TEACHER_CHAPTER_DETAIL: '/teacher/chapter/:chapterId',
+  TEACHER_STUDENTS: '/teacher/students',
+  TEACHER_STUDENT_FEES: '/teacher/student-fees',
+  TEACHER_ATTENDANCE: '/teacher/attendance',
+  TEACHER_TIMETABLE: '/teacher/timetable',
+  TEACHER_ASSIGNMENTS: '/teacher/assignments',
+  TEACHER_CREATE_ASSIGNMENT: '/teacher/create-assignment',
+  TEACHER_EVALUATE_ASSIGNMENTS: '/teacher/evaluate-assignments',
+  TEACHER_LIVE_CLASSES: '/teacher/live-classes',
+  TEACHER_PROFILE: '/teacher/profile',
+  TEACHER_EXAMS: '/teacher/exams',
+  TEACHER_EXAM_DETAILS: '/teacher/exams/:examId',
+
+  // Admin routes
+  ADMIN_DASHBOARD: '/admin/dashboard',
+  ADMIN_ANALYTICS: '/admin/analytics',
+  ADMIN_MANAGE_STUDENTS: '/admin/manage-students',
+  ADMIN_MANAGE_TEACHERS: '/admin/manage-teachers',
+  ADMIN_MANAGE_LIVE_CLASSES: '/admin/manage-live-classes',
+  ADMIN_MANAGE_REPORTS: '/admin/manage-reports',
+  ADMIN_ATTENDANCE: '/admin/attendance',
+  ADMIN_TIMETABLE: '/admin/timetable',
+  ADMIN_MANAGE_SUBJECTS: '/admin/manage-subjects',
+  ADMIN_PROFILE: '/admin/profile',
+  ADMIN_MANAGE_CLASSES: '/admin/manage-classes',
+  ADMIN_MANAGE_FEES: '/admin/manage-fees',
+  ADMIN_EXAMS: '/admin/exams',
+  ADMIN_ACCESS_MANAGEMENT: '/admin/access-management',
+  SUPER_ADMIN_DASHBOARD: '/super-admin/dashboard',
+  SUPER_ADMIN_MANAGE_SCHOOLS: '/super-admin/manage-schools',
+};
+
+// Role constants
+export const ROLES = {
+  STUDENT: 'student',
+  TEACHER: 'teacher',
+  ADMIN: 'admin',
+  SUPER_ADMIN: 'super_admin',
+};

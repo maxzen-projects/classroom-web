@@ -1,0 +1,338 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg: 248 250 252;
+  --color-text: 15 23 42;
+  --color-text-muted: 71 85 105;
+  --color-primary: 37 99 235;
+  --color-primary-soft: 219 234 254;
+  --color-primary-hover: 29 78 216;
+  --color-secondary: 14 165 233;
+  --color-secondary-hover: 2 132 199;
+  --color-card: 255 255 255;
+  --color-card-alt: 241 245 249;
+  --color-border: 203 213 225;
+  --color-ring: 59 130 246;
+  --color-success: 22 163 74;
+  --color-success-soft: 220 252 231;
+  --color-warning: 217 119 6;
+  --color-warning-soft: 254 243 199;
+  --color-danger: 220 38 38;
+  --color-danger-soft: 254 226 226;
+  --color-info: 2 132 199;
+  --color-info-soft: 224 242 254;
+  --color-overlay: 15 23 42;
+  --shadow-card: 0 18px 45px -24px rgba(15, 23, 42, 0.28);
+  --shadow-card-hover: 0 24px 55px -24px rgba(15, 23, 42, 0.36);
+}
+
+[data-theme='dark'] {
+  --color-bg: 10 15 27;
+  --color-text: 226 232 240;
+  --color-text-muted: 148 163 184;
+  --color-primary: 96 165 250;
+  --color-primary-soft: 30 41 59;
+  --color-primary-hover: 59 130 246;
+  --color-secondary: 45 212 191;
+  --color-secondary-hover: 20 184 166;
+  --color-card: 15 23 42;
+  --color-card-alt: 30 41 59;
+  --color-border: 51 65 85;
+  --color-ring: 96 165 250;
+  --color-success: 74 222 128;
+  --color-success-soft: 20 83 45;
+  --color-warning: 251 191 36;
+  --color-warning-soft: 120 53 15;
+  --color-danger: 248 113 113;
+  --color-danger-soft: 127 29 29;
+  --color-info: 56 189 248;
+  --color-info-soft: 12 74 110;
+  --color-overlay: 2 6 23;
+  --shadow-card: 0 20px 48px -28px rgba(2, 6, 23, 0.7);
+  --shadow-card-hover: 0 24px 56px -24px rgba(2, 6, 23, 0.85);
+}
+
+[data-theme='blue'] {
+  --color-bg: 239 246 255;
+  --color-text: 12 74 110;
+  --color-text-muted: 14 116 144;
+  --color-primary: 14 116 144;
+  --color-primary-soft: 207 250 254;
+  --color-primary-hover: 8 145 178;
+  --color-secondary: 59 130 246;
+  --color-secondary-hover: 37 99 235;
+  --color-card: 255 255 255;
+  --color-card-alt: 224 242 254;
+  --color-border: 125 211 252;
+  --color-ring: 14 116 144;
+  --color-success: 5 150 105;
+  --color-success-soft: 209 250 229;
+  --color-warning: 217 119 6;
+  --color-warning-soft: 254 243 199;
+  --color-danger: 220 38 38;
+  --color-danger-soft: 254 226 226;
+  --color-info: 14 165 233;
+  --color-info-soft: 224 242 254;
+}
+
+[data-theme='red'] {
+  --color-bg: 255 241 242;
+  --color-text: 69 10 10;
+  --color-text-muted: 127 29 29;
+  --color-primary: 220 38 38;
+  --color-primary-soft: 254 226 226;
+  --color-primary-hover: 185 28 28;
+  --color-secondary: 249 115 22;
+  --color-secondary-hover: 234 88 12;
+  --color-card: 255 255 255;
+  --color-card-alt: 254 242 242;
+  --color-border: 252 165 165;
+  --color-ring: 239 68 68;
+  --color-success: 21 128 61;
+  --color-success-soft: 220 252 231;
+  --color-warning: 217 119 6;
+  --color-warning-soft: 254 243 199;
+  --color-danger: 190 24 93;
+  --color-danger-soft: 251 207 232;
+  --color-info: 30 64 175;
+  --color-info-soft: 219 234 254;
+}
+
+[data-theme='purple'] {
+  --color-bg: 250 245 255;
+  --color-text: 59 7 100;
+  --color-text-muted: 107 33 168;
+  --color-primary: 126 34 206;
+  --color-primary-soft: 243 232 255;
+  --color-primary-hover: 109 40 217;
+  --color-secondary: 217 70 239;
+  --color-secondary-hover: 192 38 211;
+  --color-card: 255 255 255;
+  --color-card-alt: 245 243 255;
+  --color-border: 216 180 254;
+  --color-ring: 168 85 247;
+  --color-success: 22 163 74;
+  --color-success-soft: 220 252 231;
+  --color-warning: 202 138 4;
+  --color-warning-soft: 254 249 195;
+  --color-danger: 225 29 72;
+  --color-danger-soft: 255 228 230;
+  --color-info: 124 58 237;
+  --color-info-soft: 237 233 254;
+}
+
+[data-theme='custom'] {
+  --color-bg: 245 247 240;
+  --color-text: 44 62 80;
+  --color-text-muted: 92 107 119;
+  --color-primary: 35 99 70;
+  --color-primary-soft: 220 252 231;
+  --color-primary-hover: 21 128 61;
+  --color-secondary: 180 83 9;
+  --color-secondary-hover: 146 64 14;
+  --color-card: 255 252 245;
+  --color-card-alt: 254 249 195;
+  --color-border: 187 247 208;
+  --color-ring: 22 163 74;
+  --color-success: 22 163 74;
+  --color-success-soft: 220 252 231;
+  --color-warning: 217 119 6;
+  --color-warning-soft: 254 243 199;
+  --color-danger: 220 38 38;
+  --color-danger-soft: 254 226 226;
+  --color-info: 3 105 161;
+  --color-info-soft: 224 242 254;
+}
+
+@layer base {
+  html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(var(--color-bg));
+    color: rgb(var(--color-text));
+  }
+
+  body {
+    @apply bg-bg text-text;
+    min-height: 100vh;
+    transition: background-color 220ms ease, color 220ms ease;
+  }
+
+  * {
+    scrollbar-color: rgb(var(--color-primary)) rgb(var(--color-card-alt));
+  }
+
+  *:focus-visible {
+    outline: 2px solid rgb(var(--color-ring));
+    outline-offset: 2px;
+  }
+
+  [data-theme='dark'] input,
+  [data-theme='dark'] textarea,
+  [data-theme='dark'] select,
+  [data-theme='dark'] option,
+  [data-theme='dark'] optgroup {
+    color: rgb(var(--color-text));
+    background-color: rgb(var(--color-card));
+  }
+
+  [data-theme='dark'] input::placeholder,
+  [data-theme='dark'] textarea::placeholder {
+    color: rgb(var(--color-text-muted));
+  }
+
+  [data-theme='dark'] input:disabled,
+  [data-theme='dark'] textarea:disabled,
+  [data-theme='dark'] select:disabled {
+    color: rgb(var(--color-text-muted));
+    background-color: rgb(var(--color-card-alt));
+  }
+}
+
+@layer utilities {
+  [data-theme='dark'] .text-black,
+  [data-theme='dark'] .text-gray-900,
+  [data-theme='dark'] .text-gray-800,
+  [data-theme='dark'] .text-gray-700 {
+    color: rgb(var(--color-text)) !important;
+  }
+
+  [data-theme='dark'] .text-white {
+    color: rgb(var(--color-text)) !important;
+  }
+
+  [data-theme='dark'] .text-gray-600,
+  [data-theme='dark'] .text-gray-500,
+  [data-theme='dark'] .text-gray-400,
+  [data-theme='dark'] .text-gray-300 {
+    color: rgb(var(--color-text-muted)) !important;
+  }
+
+  [data-theme='dark'] .bg-white,
+  [data-theme='dark'] .bg-gray-50,
+  [data-theme='dark'] .bg-gray-100 {
+    background-color: rgb(var(--color-card)) !important;
+  }
+
+  [data-theme='dark'] .bg-gray-200,
+  [data-theme='dark'] .bg-gray-300 {
+    background-color: rgb(var(--color-card-alt)) !important;
+  }
+
+  [data-theme='dark'] .border-gray-100,
+  [data-theme='dark'] .border-gray-200,
+  [data-theme='dark'] .border-gray-300,
+  [data-theme='dark'] .border-gray-400 {
+    border-color: rgb(var(--color-border)) !important;
+  }
+
+  [data-theme='dark'] .hover\:bg-gray-50:hover,
+  [data-theme='dark'] .hover\:bg-gray-100:hover,
+  [data-theme='dark'] .hover\:bg-gray-200:hover {
+    background-color: rgb(var(--color-card-alt)) !important;
+  }
+
+  [data-theme='dark'] .hover\:text-gray-900:hover,
+  [data-theme='dark'] .hover\:text-gray-800:hover,
+  [data-theme='dark'] .hover\:text-black:hover {
+    color: rgb(var(--color-text)) !important;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-lg bg-primary px-4 py-2 font-medium text-card shadow-card transition-all duration-200 hover:bg-primary-hover hover:shadow-card-hover;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-lg bg-secondary px-4 py-2 font-medium text-card shadow-card transition-all duration-200 hover:bg-secondary-hover hover:shadow-card-hover;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center rounded-lg border border-border bg-card px-4 py-2 font-medium text-text transition-all duration-200 hover:border-primary hover:bg-primary-soft hover:text-primary;
+  }
+
+  .card {
+    @apply rounded-2xl border border-border bg-card p-6 shadow-card transition-all duration-200;
+  }
+
+  .card-hover {
+    @apply hover:-translate-y-0.5 hover:shadow-card-hover;
+  }
+
+  .input-field {
+    @apply w-full rounded-lg border border-border bg-card px-3 py-2 text-text placeholder:text-text-muted focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary-soft;
+  }
+
+  .surface-panel {
+    @apply rounded-2xl border border-border bg-card shadow-card;
+  }
+
+  .theme-transition {
+    transition: background-color 220ms ease, border-color 220ms ease, color 220ms ease, fill 220ms ease, stroke 220ms ease, box-shadow 220ms ease;
+  }
+}
+
+@layer utilities {
+.bg-grid {
+    background-image:
+      linear-gradient(to right, rgb(var(--color-border) / 0.2) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(var(--color-border) / 0.2) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+}
+
+.attendance-calendar .rbc-toolbar {
+  margin-bottom: 1.25rem;
+}
+
+.attendance-calendar .rbc-toolbar button {
+  border-radius: 999px;
+  border: 1px solid rgb(var(--color-border));
+  background: rgb(var(--color-card));
+  color: rgb(var(--color-text));
+  transition: background-color 220ms ease, color 220ms ease, border-color 220ms ease;
+}
+
+.attendance-calendar .rbc-toolbar button:hover,
+.attendance-calendar .rbc-toolbar button:focus {
+  background: rgb(var(--color-primary-soft));
+  color: rgb(var(--color-primary));
+  border-color: rgb(var(--color-primary));
+}
+
+.attendance-calendar .rbc-toolbar button.rbc-active {
+  background: rgb(var(--color-primary));
+  color: rgb(var(--color-card));
+  border-color: rgb(var(--color-primary));
+}
+
+.attendance-calendar .rbc-toolbar-label,
+.attendance-calendar .rbc-header,
+.attendance-calendar .rbc-label {
+  color: rgb(var(--color-text));
+}
+
+.attendance-calendar .rbc-month-view,
+.attendance-calendar .rbc-time-view,
+.attendance-calendar .rbc-agenda-view table.rbc-agenda-table {
+  border-color: rgb(var(--color-border));
+  background: rgb(var(--color-card));
+}
+
+.attendance-calendar .rbc-day-bg,
+.attendance-calendar .rbc-header,
+.attendance-calendar .rbc-month-row + .rbc-month-row,
+.attendance-calendar .rbc-day-slot .rbc-time-slot,
+.attendance-calendar .rbc-timeslot-group {
+  border-color: rgb(var(--color-border));
+}
+
+.attendance-calendar .rbc-off-range-bg {
+  background: rgb(var(--color-card-alt));
+}
+
+.attendance-calendar .rbc-today {
+  background: rgb(var(--color-primary-soft));
+}
